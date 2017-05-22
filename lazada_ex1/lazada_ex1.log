@@ -1,0 +1,26 @@
+INFO:root:===========Date: 2017-05-22 09:44:46.403000
+INFO:root:Get All Users...
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /users/ HTTP/1.1" 200 None
+INFO:root:Get One Random User...
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /users/1 HTTP/1.1" 200 None
+INFO:root:Get an user with invalid boundary id...
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /users/-2 HTTP/1.1" 404 2
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /users/17 HTTP/1.1" 404 2
+INFO:root:Search User By Name...
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /users?name=Kurtis%20Weissnat HTTP/1.1" 200 None
+INFO:root:Search User By Name and Username...
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /users?name=Leanne%20Graham&username=Bret HTTP/1.1" 200 None
+INFO:root:Search By Single Invalid data: invalid name' 
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /users?name=INVALID HTTP/1.1" 200 2
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "GET /users?id=4&name=Patricia%20Lebsack&name=INVALID HTTP/1.1" 200 None
+INFO:root:Create User...
+DEBUG:requests.packages.urllib3.connectionpool:Starting new HTTPS connection (1): jsonplaceholder.typicode.com
+DEBUG:requests.packages.urllib3.connectionpool:https://jsonplaceholder.typicode.com:443 "POST /users/ HTTP/1.1" 201 205
